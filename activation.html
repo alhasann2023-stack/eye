@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Audiometry - Activation Pro</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root {
+  --primary: #00d2ff;
+  --secondary: #3a7bd5;
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+  font-family: 'Inter', 'Tajawal', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.main-wrapper {
+  display: flex;
+  max-width: 850px;
+  width: 100%;
+  background: var(--glass);
+  backdrop-filter: blur(15px);
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* قسم المميزات - الجهة اليمنى */
+.info-panel {
+  flex: 1;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 1px solid var(--glass-border);
+}
+
+/* قسم التفعيل - الجهة اليسرى */
+.activation-panel {
+  flex: 1;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 { font-size: 24px; margin-bottom: 10px; color: var(--primary); }
+h3 { font-size: 18px; margin-bottom: 20px; border-bottom: 2px solid var(--primary); padding-bottom: 10px; display: inline-block; }
+
+.feature-list {
+  text-align: right;
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.feature-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-list i { color: var(--primary); width: 20px; }
+
+.device-box {
+  background: rgba(0,0,0,0.3);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-family: monospace;
+  color: var(--primary);
+  word-break: break-all;
+  font-size: 13px;
+  border: 1px dashed var(--glass-border);
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+input:focus { outline: none; border-color: var(--primary); background: rgba(255,255,255,0.1); }
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3); }
+
+#status { margin-top: 15px; font-size: 14px; white-space: pre-line; }
+
+#subscriptionBox {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  text-align: right;
+  display: none;
+  font-size: 13px;
+}
+
+.contact-dev {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #94a3b8;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 15px;
+}
+
+.contact-dev a { color: var(--primary); text-decoration: none; font-weight: bold; }
+
+@media (max-width: 768px) {
+  .main-wrapper { flex-direction: column; }
+  .info-panel { order: 2; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="main-wrapper">
+  
+  <div class="info-panel">
+    <h3><i class="fas fa-microscope"></i> مميزات النظام الذكي</h3>
+    <ul class="feature-list">
+      <li><i class="fas fa-check-circle"></i> تخطيط السمع (Audiometry) وضغط الطبلة</li>
+      <li><i class="fas fa-brain"></i> تحليل النتائج آلياً (تحليل متقدم) </li>
+            <li><i class="fas fa-brain"></i> اضافة شعار وعنوان المستشفى او المركز </li>
+      <li><i class="fas fa-file-medical"></i> تقارير تلقائية شاملة ببيانات العيادة</li>
+      <li><i class="fas fa-shield-virus"></i> قاعدة بيانات مؤرشفة للمرضى</li>
+      <li><i class="fas fa-search"></i> البحث السريع برقم الهاتف</li>
+      <li><i class="fas fa-print"></i> دعم الماسح الورقي للتخطيط</li>
+      <li><i class="fas fa-volume-high"></i> مراقبة ضوضاء غرفة الفحص</li>
+    </ul>
+    
+    <div class="contact-dev">
+      <p><i class="fas fa-code"></i> المطور: <strong>نشوان الشيباني</strong></p>
+      <p><i class="fab fa-whatsapp"></i> تواصل: <a href="https://wa.me/967776458925">00967776458925</a></p>
+    </div>
+  </div>
+
+  <div class="activation-panel">
+    <h1><i class="fas fa-lock"></i> تفعيل النظام</h1>
+    <p style="font-size: 13px; color: #94a3b8; margin-bottom: 20px;">يرجى إدخال رمز الترخيص لتفعيل كافة المزايا</p>
+
+    <div class="device-box" id="deviceId">جاري التحميل...</div>
+
+    <input type="text" id="licenseKey" placeholder="أدخل مفتاح الترخيص هنا">
+
+    <button onclick="activate()" id="btn">تفعيل الآن</button>
+
+    <p id="status"></p>
+
+    <div id="subscriptionBox">
+      <p><i class="far fa-calendar-check"></i> مدة الاشتراك: <span id="daysLeft">--</span> يوم</p>
+      <p><i class="far fa-clock"></i> تاريخ الانتهاء: <span id="expireDate">--</span></p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// عرض Device ID
+async function loadDevice() {
+  try {
+    const id = await window.api.getDeviceId();
+    document.getElementById("deviceId").innerText = id;
+  } catch {
+    document.getElementById("deviceId").innerText = "ID-UNAVAILABLE";
+  }
+}
+loadDevice();
+
+// التفعيل
+async function activate() {
+  const key = document.getElementById("licenseKey").value.trim();
+  const status = document.getElementById("status");
+  const btn = document.getElementById("btn");
+
+  if (!key) {
+    status.innerText = "⚠️ يرجى إدخال المفتاح";
+    status.style.color = "#fbbf24";
+    return;
+  }
+
+  btn.innerText = "جاري التحقق...";
+
+  try {
+    const result = await window.api.activateApp(key);
+
+    if (result.success) {
+      status.innerText = "🎉 تم التفعيل بنجاح";
+      status.style.color = "lightgreen";
+      
+
+      const box = document.getElementById("subscriptionBox");
+      box.style.display = "block";
+
+      document.getElementById("daysLeft").innerText = result.daysLeft ?? "--";
+
+      let now = new Date();
+      now.setDate(now.getDate() + (result.daysLeft || 0));
+      document.getElementById("expireDate").innerText = now.toLocaleDateString('ar-YE');
+
+      // إنشاء زر الدخول
+      const enterBtn = document.createElement("button");
+      enterBtn.innerHTML = '<i class="fas fa-rocket"></i> الدخول إلى التطبيق';
+      enterBtn.style.marginTop = "15px";
+      enterBtn.style.background = "linear-gradient(135deg, #22c55e, #16a34a)";
+
+      enterBtn.onclick = () => {
+        window.location.href = "dist/index.html";
+      };
+
+      document.querySelector(".activation-panel").appendChild(enterBtn);
+      btn.style.display = "none";
+
+     } else {
+      status.innerText = result.message || "❌ فشل التفعيل";
+      status.style.color = "#f87171";
+    }
+
+   } catch (e) {
+    status.innerText = "❌ خطأ في الاتصال بالنظام";
+    status.style.color = "#f87171";
+  }
+
+  btn.innerText = "تفعيل الآن";
+}
+</script>
+
+</body>
+</html>
