@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smart Audiometry - Activation Pro</title>
+<title>Smart Vision - Activation Pro</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -75,7 +75,7 @@ h3 { font-size: 18px; margin-bottom: 20px; border-bottom: 2px solid var(--primar
   gap: 10px;
 }
 
-.feature-list i { color: var(--primary); width: 20px; }
+.feature-list i { color: var(--primary); width: 20px; text-align: center; }
 
 .device-box {
   background: rgba(0,0,0,0.3);
@@ -155,21 +155,22 @@ button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 210, 
 <div class="main-wrapper">
   
   <div class="info-panel">
-    <h3><i class="fas fa-microscope"></i> مميزات النظام الذكي</h3>
+    <h3><i class="fas fa-eye"></i> نظام فحص النظر الذكي</h3>
     <ul class="feature-list">
-      <li><i class="fas fa-check-circle"></i> تخطيط السمع (Audiometry) وضغط الطبلة</li>
-      <li><i class="fas fa-brain"></i> تحليل النتائج آلياً (تحليل متقدم) </li>
-            <li><i class="fas fa-brain"></i> اضافة شعار وعنوان المستشفى او المركز </li>
-      <li><i class="fas fa-file-medical"></i> تقارير تلقائية شاملة ببيانات العيادة</li>
-      <li><i class="fas fa-shield-virus"></i> قاعدة بيانات مؤرشفة للمرضى</li>
-      <li><i class="fas fa-search"></i> البحث السريع برقم الهاتف</li>
-      <li><i class="fas fa-print"></i> دعم الماسح الورقي للتخطيط</li>
-      <li><i class="fas fa-volume-high"></i> مراقبة ضوضاء غرفة الفحص</li>
+      <li><i class="fas fa-gauge-high"></i> لوحة تحكم سهلة الاستخدام</li>
+      <li><i class="fas fa-user-gear"></i> إعداد بيانات العيادة وشعار المركز</li>
+      <li><i class="fas fa-folder-open"></i> أرشفة إلكترونية شاملة للمرضى</li>
+      <li><i class="fas fa-brain"></i> تحاليل متقدمة للنتائج البصرية</li>
+      <li><i class="fas fa-glasses"></i> قياس العدسات اللاصقة آلياً</li>
+      <li><i class="fas fa-plus-minus"></i> حساب قيمة الإديشن (ADD) آلياً</li>
+      <li><i class="fas fa-eye-dropper"></i> قياس وتسجيل ضغط العين (IOP)</li>
+      <li><i class="fas fa-notes-medical"></i> نصائح وتوصيات طبية مخصصة</li>
+      <li><i class="fas fa-print"></i> تقارير طبية جاهزة للطباعة</li>
     </ul>
     
     <div class="contact-dev">
       <p><i class="fas fa-code"></i> المطور: <strong>نشوان الشيباني</strong></p>
-      <p><i class="fab fa-whatsapp"></i> تواصل: <a href="https://wa.me/967776458925">00967776458925</a></p>
+      <p><i class="fab fa-whatsapp"></i> لطلب كود التفعيل تواصل معنا عبر الرقم: <a href="https://wa.me/967776458925">00967776458925</a></p>
     </div>
   </div>
 
@@ -225,7 +226,6 @@ async function activate() {
     if (result.success) {
       status.innerText = "🎉 تم التفعيل بنجاح";
       status.style.color = "lightgreen";
-      
 
       const box = document.getElementById("subscriptionBox");
       box.style.display = "block";
@@ -249,12 +249,12 @@ async function activate() {
       document.querySelector(".activation-panel").appendChild(enterBtn);
       btn.style.display = "none";
 
-     } else {
+    } else {
       status.innerText = result.message || "❌ فشل التفعيل";
       status.style.color = "#f87171";
     }
 
-   } catch (e) {
+  } catch (e) {
     status.innerText = "❌ خطأ في الاتصال بالنظام";
     status.style.color = "#f87171";
   }

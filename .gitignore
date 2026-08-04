@@ -18,4 +18,5 @@ win-unpacked/
 .idea/
 
 .env
+serviceAccountKey.json
 تطبيق فحص المظر النهائي/

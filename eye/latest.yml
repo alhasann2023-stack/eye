@@ -1,0 +1,8 @@
+version: 0.0.0
+files:
+  - url: test-eye-setup-0.0.0.exe
+    sha512: a30GmK+hW+YI21AgsSLBh2rULSejFH4A6EpnDMmAUQTh6J8dQxseGh34qMuSw5dS8z+4qkF61HpNVh4XLXmneA==
+    size: 121914474
+path: test-eye-setup-0.0.0.exe
+sha512: a30GmK+hW+YI21AgsSLBh2rULSejFH4A6EpnDMmAUQTh6J8dQxseGh34qMuSw5dS8z+4qkF61HpNVh4XLXmneA==
+releaseDate: '2026-08-04T20:19:36.875Z'
